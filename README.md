@@ -8,8 +8,7 @@
 </head>
 <body>
 
-  <h1>My Scratch Page</h1>
-  <p>If you see this, the file works.</p>
+  <h1>My Website</h1>
 
 </body>
 </html>
