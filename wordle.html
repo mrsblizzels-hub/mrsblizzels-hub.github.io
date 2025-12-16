@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Wordle Lite</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #121213;
+    color: white;
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 8px;
+    justify-content: center;
+    margin: 20px auto;
+  }
+
+  .cell {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #3a3a3c;
+    font-size: 2em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .correct { background: #538d4e; }
+  .present { background: #b59f3b; }
+  .absent { background: #3a3a3c; }
+
+  input, button {
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>AI Wordle Lite</h1>
+<p>Guess the 5-letter word</p>
+
+<div class="grid" id="grid"></div>
+
+<input id="guess" maxlength="5" placeholder="Enter guess">
+<br>
+<button onclick="submitGuess()">Submit</button>
+<button onclick="giveHint()">Get Hint</button>
+
+<p id="message"></p>
+
+<script>
+  // AI helped generate base logic; student customized words, hints, styling
+  const words = [
+    { word: "model", hint: "Used in machine learning" },
+    { word: "data", hint: "Collected for analysis" },
+    { word: "chart", hint: "Visualizes information" }
+  ];
+
+  const chosen = words[Math.floor(Math.random() * words.length)];
+  const answer = chosen.word;
+  let attempts = 0;
+
+  const grid = document.getElementById("grid");
+
+  function submitGuess() {
+    const guess = document.getElementById("guess").value.toLowerCase();
+    if (guess.length !== 5) return;
+
+    for (let i = 0; i < 5; i++) {
+      const cell = document.createElement("div");
+      cell.className = "cell";
+      cell.textContent = guess[i];
+
+      if (guess[i] === answer[i]) {
+        cell.classList.add("correct");
+      } else if (answer.includes(guess[i])) {
+        cell.classList.add("present");
+      } else {
+        cell.classList.add("absent");
+      }
+      grid.appendChild(cell);
+    }
+
+    attempts++;
+    document.getElementById("guess").value = "";
+
+    if (guess === answer) {
+      document.getElementById("message").textContent = "You win!";
+    } else if (attempts === 6) {
+      document.getElementById("message").textContent =
+        "Game over! The word was " + answer.toUpperCase();
+    }
+  }
+
+  function giveHint() {
+    document.getElementById("message").textContent =
+      "Hint: " + chosen.hint;
+  }
+</script>
+
+</body>
+</html>
