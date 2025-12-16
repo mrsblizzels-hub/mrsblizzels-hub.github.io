@@ -16,17 +16,17 @@ body {
 }
 
 .header {
-    background-color: #9b59b6;
+    background-color: #c8a2c8; /* pastel lavender */
     text-align: center;
 }
 
 .content {
-    background-color: #ffffff;
-    border: 2px solid #cccccc;
+    background-color: #ffffff; /* white */
+    border: 2px solid #dcdcdc; /* soft gray border */
 }
 
 .footer {
-    background-color: #ffd700;
+    background-color: #fff9c4; /* pastel yellow */
     text-align: center;
 }
 
@@ -36,5 +36,5 @@ img {
 }
 
 ul li {
-    color: #006400; /* green list items */
+    color: #3a7d44; /* softer green */
 }
