@@ -3,33 +3,184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Caroline Durr</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Caroline Durr | Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+      font-size: 36px;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    header a {
+      color: #1a4fd8;
+      text-decoration: none;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #000;
+      padding-bottom: 5px;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .entry {
+      margin-bottom: 20px;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-weight: bold;
+    }
+
+    .location {
+      font-style: italic;
+      font-weight: normal;
+    }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .skills {
+      list-style-type: disc;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
 
   <header>
     <h1>Caroline Durr</h1>
     <p>
       <a href="mailto:cdurr@byu.edu">cdurr@byu.edu</a> |
-      <a href="https://linkedin.com/in/carolinedurr">LinkedIn</a>
+      (385) 482-5000 |
+      <a href="https://www.linkedin.com/in/carolinedurr" target="_blank">LinkedIn</a>
     </p>
   </header>
 
   <section>
     <h2>Education</h2>
-    <p><strong>Brigham Young University – Marriott School of Business</strong></p>
-    <p>B.S. Pre-Business | GPA: 3.80</p>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span>Brigham Young University – Marriott School of Business</span>
+        <span class="location">Provo, UT</span>
+      </div>
+      <p><strong>Bachelor of Science in Pre-Business</strong> — April 20XX</p>
+      <ul>
+        <li>GPA: 3.80 / 4.00</li>
+        <li>BYU Merit-based Academic Scholarship</li>
+      </ul>
+    </div>
   </section>
 
   <section>
     <h2>Experience</h2>
-    <h3>BRAG Gymnastics – Coach</h3>
-    <ul>
-      <li>Coached athletes ages 3–14</li>
-      <li>Developed lesson plans and led groups</li>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span>BRAG Gymnastics — Coach</span>
+        <span class="location">Bull Run, VA</span>
+      </div>
+      <p>June 2022 – June 2024</p>
+      <ul>
+        <li>Coached gymnastics to athletes ages 3–14 over summer and year-round programs.</li>
+        <li>Created lesson plans and led groups of children in a fast-paced environment.</li>
+        <li>Developed quick decision-making skills during unplanned situations.</li>
+        <li>Worked closely with children, parents, and fellow coaches to ensure safety and progress.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span>Union Youth Football Association — Coach</span>
+        <span class="location">Tulsa, OK</span>
+      </div>
+      <p>August 2021 – December 2022</p>
+      <ul>
+        <li>Coached 4th- and 5th-grade cheerleaders.</li>
+        <li>Prepared teams to cheer at football games and competitions.</li>
+        <li>Created original routines that successfully competed in events.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Leadership & Service</h2>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span>Technical Honor Society — Co-President</span>
+        <span class="location">Bristow, VA</span>
+      </div>
+      <p>August 2022 – May 2024</p>
+      <ul>
+        <li>Led club operations and organized service-based internships.</li>
+        <li>Worked in elementary and middle schools assisting teachers and students.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span>The Church of Jesus Christ of Latter-day Saints — Young Women’s President</span>
+        <span class="location">Bristow, VA</span>
+      </div>
+      <p>September 2022 – September 2023</p>
+      <ul>
+        <li>Planned and led weekly meetings and activities.</li>
+        <li>Provided mentorship and service to fellow young women.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Awards, Skills & Interests</h2>
+    <ul class="skills">
+      <li>CPR Certified</li>
     </ul>
   </section>
+
+  <footer>
+    <p>© 2025 Caroline Durr</p>
+  </footer>
 
 </body>
 </html>
