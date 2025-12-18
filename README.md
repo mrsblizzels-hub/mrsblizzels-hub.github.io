@@ -23,10 +23,6 @@
       font-size: 16px;
     }
 
-    header a {
-      color: #1a4fd8;
-      text-decoration: none;
-    }
 
     section {
       margin-bottom: 30px;
