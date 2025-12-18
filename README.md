@@ -6,15 +6,7 @@
   <title>Caroline Durr | Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
-    }
+<link rel="stylesheet" href="style.css">
 
     header {
       text-align: center;
